@@ -1,5 +1,6 @@
 const mysql = require('mysql');
 
+//mysql connect
 const connection  = mysql.createConnection({
   host     : process.env.DB_HOST,
   user     : process.env.DB_USER,
@@ -14,5 +15,6 @@ connection.connect((err, dbs)=> {
 	  console.log("unable to connected db.....")
   }
 });
+
 
 module.exports=connection;

@@ -1,5 +1,6 @@
 const connection=require('../database/db')
 
+//create simple user table
 var sql = "CREATE TABLE users (id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(255), email VARCHAR(255) UNIQUE, password VARCHAR(255))";
 connection.query(sql, (err, result)=> {
   if(result){
@@ -8,5 +9,6 @@ connection.query(sql, (err, result)=> {
     console.log("table already exits")
   }
 });
+
 
 module.exports=connection;
